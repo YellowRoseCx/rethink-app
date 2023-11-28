@@ -1,7 +1,23 @@
 name: Nightly
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag of Rethink Firewall to test: v055b'
+        default: latest
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      version:
+        description: 'Version tag of Rethink Firewall to test: v055b'
+        default: latest
+        required: false
+        type: string
+
+permissions:
+  contents: write
 
 jobs:
   evaluateChanges:
