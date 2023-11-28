@@ -58,4 +58,3 @@ jobs:
         with:
           name: RethinkApp-${{ inputs.version }}
           path: $apk_path
-           rm "$apk_path"
